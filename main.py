@@ -1,5 +1,6 @@
 from config.settings import Settings
 from services.supabase_service import SupabaseService
+from services.zapi_service import ZapiService
 
 
 def main():
