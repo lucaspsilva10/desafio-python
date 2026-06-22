@@ -51,6 +51,14 @@ No SQL Editor do Supabase, execute a seguinte query:
         created_at timestamp with time zone default now()
     );
 
+Caso tenha problemas com o row level security, execute o comando abaixo:
+
+    CREATE POLICY "Ler contatos ativos anon"
+    ON public.contatos
+    FOR SELECT
+    TO anon
+    USING (ativo = true);
+
 ---
 
 ## 6- Inserir registros para teste
