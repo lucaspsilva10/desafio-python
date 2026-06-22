@@ -6,9 +6,11 @@ class ZapiService:
         self,
         instance_id: str,
         instance_token: str,
+        instance_client_token: str,
     ):
         self.instance_id = instance_id
         self.instance_token = instance_token
+        self.instance_client_token = instance_client_token
 
     def send_message(self, telefone: str, nome: str):
         url = (
@@ -24,6 +26,7 @@ class ZapiService:
         }
 
         headers = {
+            "Client-Token": self.instance_client_token,
             "Content-Type": "application/json"
         }
 

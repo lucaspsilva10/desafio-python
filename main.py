@@ -23,6 +23,7 @@ def main():
     zapi_service = ZapiService(
         settings.zapi_instance_id,
         settings.zapi_instance_token,
+        settings.zapi_client_token,
     )
 
     if not contatos:
