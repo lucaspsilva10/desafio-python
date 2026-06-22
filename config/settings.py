@@ -11,6 +11,8 @@ class Settings:
 
         self.zapi_instance_id = os.getenv("ZAPI_INSTANCE_ID")
         self.zapi_instance_token = os.getenv("ZAPI_INSTANCE_TOKEN")
+        self.zapi_client_token = os.getenv("ZAPI_CLIENT_TOKEN")
+
 
         self._validate()
 
@@ -20,6 +22,7 @@ class Settings:
             "SUPABASE_KEY": self.supabase_key,
             "ZAPI_INSTANCE_ID": self.zapi_instance_id,
             "ZAPI_INSTANCE_TOKEN": self.zapi_instance_token,
+            "ZAPI_CLIENT_TOKEN": self.zapi_client_token,
         }
 
         missing = [
